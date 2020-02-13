@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable = no maximum-scale = 1.0 minimum-scale=1.0> -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link href="./assets/welcome.css" rel="stylesheet">
+    <script type="text/javascript" src="./assets/welcome.js" defer=true ></script>
+    <style type="text/css">       
+        body::-webkit-scrollbar {display: none}; /* 隐藏滚动条 */
+    </style>
+</head>
+<body>
+    <div class="header" id="header" > <!--id名设置锚点-->
+        <div class="nav">
+            <span class="nav_icon"></span>
+            <ul class="nav_list">
+                <li><a href="#">首页</a></li>
+                <li>
+                    <a href="#">邮子攻略</a>
+                    <ul class="nav_2">
+                        <li>新生清单</li>
+                        <li>交通路线</li>
+                        <li>学生食堂</li>
+                        <li>学生宿舍</li>
+                        <li>校园公众号</li>
+                        <li>周边生活</li>
+                        <li>
+                            <a>网址大全</a>
+                            <div class="filler_footer"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">军训特辑</a>
+                    <ul class="nav_2">
+                        <li>军训贴士</li>
+                        <li>训练内容</li>
+                        <li>历年视频</li>
+                        <li>
+                            <a>军训纪律</a>
+                            <div class="filler_footer"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">迎新活动</a>
+                    <ul class="nav_2">
+                        <li>学长学姐帮帮忙</li>
+                        <li>
+                            <a>邮子画像</a>
+                            <div class="filler_footer"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">数据揭秘</a>
+                    <ul class="nav_2">
+                        <li>男女比例</li>
+                        <li>最难科目</li>
+                        <li>
+                            <a>生源比例</a>
+                            <div class="filler_footer"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">重邮风采</a>
+                    <ul class="nav_2">
+                        <li>组织大全</li>
+                        <li>宣传视频</li>
+                        <li>优秀代表</li>
+                        <li>
+                            <a>邮苑风光</a>
+                            <div class="filler_footer"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </div>
+
+        <div class="banner">
+            <div class="b_icon_l"></div>
+            <div class="b_icon_r"></div>
+            <div class="b_plane"></div>
+            <div class="b_car"></div>
+            <div class="b_lighter"></div>
+            <div class="ban_time">
+                <ul class="ban_time_l">
+                    <li id="day"></li>
+                    <li id="hour"></li>
+                </ul>
+                <ul class="ban_time_r">
+                    <li id="minute"></li>
+                    <li id="second"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="map">
+            <div class="title">
+                <div class="p">重邮地图</div>
+                <div class="bead">
+                    <div class="title_bead_l"></div>
+                    <div class="title_bead_r"></div>
+                </div>
+            </div>
+            <div class="map_con con">
+                <div class="map_title">
+                    <div class="map_icon"></div>
+                    <input placeholder="请输入搜索地点" type="text" class="map_in">
+                    <div class="clear" id="clear">X</div>
+                    <div class="search"></div>
+                    <div class="enlarge"></div>
+                    <div class="narrow"></div>
+                </div>
+                <div class="map_wrap" >
+                    <div class="places">
+                        <h2>常用地图</h2>
+                        <ul>
+                            <li>中心食堂</li>
+                            <li>新校门</li>
+                            <li>太极操场</li>
+                            <li>老校门</li>
+                            <li>红岩网校</li>
+                            <li>校史馆</li>
+                            <li>信科大楼</li>
+                            <li>教务处</li>
+                            <li>二教</li>
+                            <li>老图书馆</li>
+                        </ul>
+                    </div>
+                    <div class="map_container">
+                        <img class="map_img" src="./assets/image/resource/map.jpg">
+                    </div>
+                    <span class="map_tips">tips:点击地图可以添加标记，再次点击删除标记</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="strategy">
+            <div class="title">
+                <p>邮子攻略</p>
+                <div class="bead">
+                    <div class="title_bead_l"></div>
+                    <div class="title_bead_r"></div>
+                </div>
+            </div>
+            <div class="strategy_con con">
+                <div class="strategy_icon"></div>
+                <div class="strategy_wrap">
+                    <ul>
+                        <li>
+                            <span>新生清单</span>
+                            <p>
+                                大学新生报到必备清单，尽快启程新生活
+                            </p>
+                            <div class="more">了解更多</div>
+                        </li>
+                        <li>
+                            <span>交通路线</span>
+                            <p>
+                                交通路线四通八达，终汇重邮
+                            </p>
+                            <div class="more">了解更多</div>
+                        </li>
+                        <li>
+                            <span>周边美食</span>
+                            <p>
+                                汇总周边美食，集结生活信息
+                            </p>
+                            <div class="more">了解更多</div>
+                        </li>
+                        <li>
+                            <span>网址大全</span>
+                            <p>
+                                你想要的我都“邮”，通往各网站的窗口
+                            </p>
+                            <div class="more">了解更多</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bearing">
+            <div class="title">
+                <p>重邮风采</p>
+                <div class="bead">
+                    <div class="title_bead_l"></div>
+                    <div class="title_bead_r"></div>
+                </div>
+            </div>
+            <div class="bearing_con con">
+                <ul>
+                    <li>
+                        <span></span>
+                        <p>丰富多彩的组织生活是大学中绚丽的一抹色彩，不用犹豫不决，挑花眼，这里为你解开谜团！</p>
+                        <div class="more">
+                            <a href="#">组织大全</a>
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>短短文字记录了他们在大学青春美好时光里，用实干、奋斗谱写的“化鱼成龙”的征程，致敬前辈，畅想未来。</p>
+                        <div class="more">
+                            <a href="#">优秀代表</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="edition">
+            <div class="title">
+                <p>军训特辑</p>
+                <div class="bead">
+                    <div class="title_bead_l"></div>
+                    <div class="title_bead_r"></div>
+                </div>
+            </div>
+            <div class="edition_con con">
+                <ul>
+                    <li>
+                        <span></span>
+                        <p>军训锻炼的是胆量和意识，但也别折了身体。                     </p>
+                        <div class="more">
+                            军训战士
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>立正，稍息，正步走，各司其职。消防，手语，大汇报。</p>
+                        <div class="more">
+                            训练内容
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>迈着矫健的步伐，挺拔的身姿，跑道上留下他们勇往直前的足迹。</p>
+                        <div class="more">
+                            历年视频
+                        </div>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>以军人的标准严格要求自己，别开生面“开学第一课”。</p>
+                        <div class="more">
+                            军训纪律
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="welcome">
+            <div class="title">
+                <p>迎新活动</p>
+                <div class="bead">
+                    <div class="title_bead_l"></div>
+                    <div class="title_bead_r"></div>
+                </div>
+            </div>
+            <div class="wel_con con">
+                <ul>
+                    <li>
+                        <div class="wel_icon wel_icon_l">
+                            <span></span>
+                            <span>学长学姐帮帮忙</span>
+                        </div>
+                        <div class="wel_p">
+                            <p>想知道重邮校园的秘密？想和学长学姐零距离接触？热心的学长学姐都在这里，他们是重邮小百科，为你答疑解惑！
+                            </p>
+                            <div class="more">了解更多</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wel_icon wel_icon_r">
+                            <span></span>
+                            <span>邮子画像</span>
+                        </div>
+                        <div class="wel_p">
+                            <p>简单选择形成叙述自我，绘出完整邮子画像，由你碰撞发现更多精彩。
+                            </p>
+                            <div class="more">了解更多</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="title">
+                <p>关于我们</p>
+                <div class="bead">
+                    <div class="title_bead_l"></div>
+                    <div class="title_bead_r"></div>
+                </div>
+            </div>
+            <div class="ab_con con">
+                <div class="ab_img">
+                    <img src="./assets/image/icon/10.png">
+                </div>
+                <div class="ab_p">
+                    <p>重庆邮电大学红岩网校工作站是一个校园互联网开发学生团队。 该团队自2000年创立以来，始终坚持以技术见长，充分结合同学们的话语体系和视觉风格建设网络平台，繁荣网络文化。 红岩网校工作站在校团委老师的指导下，由学生自我管理，多年来走出了一大批优秀的IT人才，深受电信运营商和BAT等知名互联网企业的青睐。 团队先后获评“全国五四红旗团支部”“团中央新媒体专业工作室”“重庆市IT杰出青年群体”等系列荣誉。
+                    </p>
+                    <div class="more">了解更多</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="f_car"></div>
+        <div class="f_con">
+            <p>关于红岩网校 | 指出错误</p>
+            <p>本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载</p>
+            <p>地址：重庆市南岸区崇文路2号（重庆邮电大学内）400065 E-mail: redrock@cqupt.edu.cn (023-62461084)</p>
+        </div>
+    </div>
+    <div class="qrcode qrcode_l"></div>
+    <div class="qrcode qrcode_r"></div> -->
+    <div class="to_top">
+        <a href="#header">  
+            <div class="rocket"></div>
+            <div class="fire"></div>
+        </a>
+    </div>
+</body>
+</html>
