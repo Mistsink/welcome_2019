@@ -237,8 +237,6 @@ a{
     left: 25.781vw;
     background: no-repeat ,url("./image/icon/3.png");
     background-size: 100%;
-    -webkit-filter: contrast(4.4);
-    filter: contrast(4.4);
     -webkit-animation: b_lighter 2s ease 2s both;
     animation: b_lighter 2s ease 2s both ;
 }
