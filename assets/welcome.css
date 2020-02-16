@@ -19,6 +19,10 @@ a{
     text-decoration: none;
 }
 
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
 .more{
     margin-top: 0.781vw;
     height:3.359vw;
