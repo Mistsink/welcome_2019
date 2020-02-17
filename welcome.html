@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable = no maximum-scale = 1.0 minimum-scale=1.0> -->
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Document</title>
     <link href="./assets/welcome.css" rel="stylesheet">
     <script type="text/javascript" src="./assets/welcome.js" defer=true ></script>
-    <style type="text/css">       
-        body::-webkit-scrollbar {display: none}; /* 隐藏滚动条 */
-    </style>
 </head>
 <body>
     <div class="header" id="header" > <!--id名设置锚点-->
@@ -125,20 +120,22 @@
                     <div class="places">
                         <h2>常用地图</h2>
                         <ul>
-                            <li>中心食堂</li>
-                            <li>新校门</li>
-                            <li>太极操场</li>
-                            <li>老校门</li>
-                            <li>红岩网校</li>
-                            <li>校史馆</li>
-                            <li>信科大楼</li>
-                            <li>教务处</li>
-                            <li>二教</li>
-                            <li>老图书馆</li>
+                            <li><a href="javascript:;">中心食堂</a></li>
+                            <li><a href="javascript:;">新校门</a></li>
+                            <li><a href="javascript:;">太极操场</a></li>
+                            <li><a href="javascript:;">老校门</a></li>
+                            <li><a href="javascript:;">红岩网校</a></li>
+                            <li><a href="javascript:;">校史馆</a></li>
+                            <li><a href="javascript:;">信科大楼</a></li>
+                            <li><a href="javascript:;">教务处</a></li>
+                            <li><a href="javascript:;">二教</a></li>
+                            <li><a href="javascript:;">老图书馆</a></li>
                         </ul>
                     </div>
                     <div class="map_container">
-                        <img class="map_img" src="./assets/image/resource/map.jpg">
+                        <div id="map_img" >
+                            <div class="map_tips_box"></div>
+                        </div>
                     </div>
                     <span class="map_tips">tips:点击地图可以添加标记，再次点击删除标记</span>
                 </div>

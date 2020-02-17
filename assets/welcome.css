@@ -14,7 +14,13 @@ body{
     font-size: 0px;
 }
 
+body::-webkit-scrollbar {display: none}; /* 隐藏滚动条 */
+
 a{
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
     text-decoration: none;
 }
 
@@ -236,8 +242,6 @@ a{
     left: 25.781vw;
     background: no-repeat ,url("./image/icon/3.png");
     background-size: 100%;
-    -webkit-filter: contrast(4.4);
-    filter: contrast(4.4);
     -webkit-animation: b_lighter 2s ease 2s both;
     animation: b_lighter 2s ease 2s both ;
 }
@@ -449,7 +453,7 @@ a{
     left:3.672vw;
 }
 
-.map_wrap .places h2,.map_wrap .places ul li{
+.map_wrap .places h2,.map_wrap .places ul li a{
     color:#275fff;
 }
 
@@ -486,20 +490,25 @@ a{
     cursor: pointer;
 }
 
-.map_container > .map_img{
+.map_container > #map_img{
     width: 45.313vw;
     height: 26.953vw;
     transition: .5s;
-} 
-
-.map_marker{
     position: absolute;
-    width: 0.781vw;
-    height: 0.781vw;
-    background-color: #33b0ff;
+    background: no-repeat url("./image/resource/map.jpg");
+    background-size: 100% 100%;
+}
+
+.map_tips_box > .map_marker{
+    position: absolute;
+    width: 1.172vw;
+    height: 1.172vw;
+    border-radius: 50%;
+    background-color: #f56161;
 }
 
 .map_wrap span{
+    font-size: 16px;
     position: absolute;
     bottom:3.125vw;
     right:3.906vw;

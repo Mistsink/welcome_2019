@@ -74,17 +74,6 @@ let interval = setInterval(function(){
     s.innerHTML = con.second;
 } , 1000)
 
-//输入框清除效果
-let map_search = document.querySelector(".map_title").getElementsByTagName("input")[0];
-let map_clear = document.querySelector("#clear");
-
-map_clear.addEventListener(
-    "click" ,
-    function(){
-        map_search.value = ""
-    },
-    false
-)
 
 //qrcode to_top效果
 var qrcode = document.querySelectorAll('.qrcode');
@@ -136,6 +125,8 @@ to_top.addEventListener(
     }
 )
 
+
+
 //标题珠子效果
 let wrap = document.getElementsByClassName("con");
 let bead = document.getElementsByClassName("bead");
@@ -156,40 +147,65 @@ for(let i =0;i<wrap.length;i++){
 }
 
 
+//输入框清除效果
+let map_search_text = document.querySelector(".map_title").getElementsByTagName("input")[0];
+let map_clear = document.querySelector("#clear");
+
+map_clear.addEventListener(
+    "click" ,
+    function(){
+        map_search_text.value = ""
+    },
+    false
+)
+
 
 
 //map效果
-let marker_index = 0 ;
 let container = document.querySelector(".map_container");
+
     //标记函数
 function map_marker(x,y,boxName){
-    var div = document.createElement("div");
+    let div = document.createElement("div");
     div.className = "map_marker";
-    div.style.left = x - 5 + "px";
-    div.style.top = y - 5 + "px";
+    div.style.left = x - 7 + "px";
+    div.style.top = y - 7 + "px";
+    img.style.transformOrigin = x +"px " + y + "px";
+    let box = document.querySelector(boxName);    
+    box.appendChild(div);
 
-    document.querySelector(boxName).appendChild(div);
-
-    var marker = document.getElementsByClassName("map_marker");
-
-    marker[marker_index].onclick = function(){
-                container.removeChild(this)
+    let marker = document.getElementsByClassName("map_marker");
+    for(let i =0;i<marker.length;i++){
+        marker[i].onclick = function(e){
+            let ev = e || window.event;
+            if(ev && ev.stopPropagation) {
+            //非IE浏览器
+            ev.stopPropagation();
+            } else {
+            //IE浏览器(IE11以下)
+            ev.cancelBubble = true;
             }
-    marker_index++;
+
+            box.removeChild(this)
+            }
+    }
 }
+
+
     //获取位置x,y;及点击事件
 container.onclick = function (e) {
     e = e || window.event;
-    var x = e.offsetX || e.layerX ,
-        y = e.offsetY || e.layerY ;
-    map_marker(x,y,".map_container");
+    
+    var x = e.offsetX  ,
+        y = e.offsetY ;
+    map_marker(x,y,".map_tips_box");
 }
 
     //放缩按钮
-let img = document.querySelector(".map_img"),
+let img = document.querySelector("#map_img"),
     enlarge = document.querySelector(".enlarge"),
     narrow = document.querySelector(".narrow");
-
+    
 let scale_n = .5,  //设置固定放缩比例
     scale_num = 1; //记录实际放缩比例
 
@@ -203,3 +219,75 @@ narrow.onclick = function(){
     img.style.transform = "scale("+scale_num+","+scale_num+")"
 }
 
+//地点按钮及输入查找功能
+    //按钮定位
+let places = document.querySelector(".places").getElementsByTagName("a");
+
+for(let i = 0; i < places.length; i++){
+    places[i].onclick = ()=>{
+        let text = places[i].innerText;
+        searchPlaces(text)
+    }
+}
+
+function searchPlaces(text){
+    let x = 0 , y = 0;
+    switch (text) {
+        case "中心食堂":
+            x = 265;
+            y = 205;
+            break;
+        case "新校门":
+            x = 112;
+            y = 281;
+            break;
+        case "太极操场":
+            x = 242;
+            y = 127;
+            break;
+        case "老校门":
+            x = 236;
+            y = 304;
+            break;
+        case "红岩网校":
+            x = 208;
+            y = 156;
+            break;
+        case "校史馆":
+            x = 65;
+            y = 220;
+            break;
+        case "信科大楼":
+            x = 341;
+            y = 270;
+            break;
+        case "教务处":
+            x = 55;
+            y = 161;
+            break;
+        case "二教":
+            x = 204;
+            y = 222;
+            break;
+        case "老图书馆":
+            x = 288;
+            y = 226;
+            break;
+        default:
+            alert("抱歉，学校并无该地点，请检查搜索地点")
+            return;
+    }
+    map_marker(x,y,".map_tips_box")
+    img.style.transformOrigin = x +"px " + y + "px";
+    img.style.transform = "scale(2)"
+}
+
+    //查找定位功能
+let map_search = document.querySelector(".search");
+map_search.onclick = ()=>{
+    searchPlaces(map_search_text.value)
+}
+
+
+
+//地图拖拽
