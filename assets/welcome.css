@@ -577,6 +577,95 @@ a:-webkit-any-link {
 
 .bearing{
     height:48.047vw;
+    position: relative;
+}
+
+@keyframes conveyor{
+    0% {
+        top: .7vw;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    80% {
+        top: .7vw;
+        left: 46vw;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    85% {
+        top: .7vw;
+        left: 46vw;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    90% {
+        top: 1.4vw;
+        left: 46.5vw;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    95% {
+        top: 5.6vw;
+        left: 47vw;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg)
+    }
+
+    98% {
+        top: 5.6vw;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        top: .7vw;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+.conveyor{
+    position: absolute;
+    top: 9.4vw;
+    left: 16vw;
+}
+
+.car{
+    float: left;
+    background-color: #33b0ff;
+    width: 3.75vw;
+    height: 1.2vw;
+    animation: conveyor 7s linear infinite;
+    -webkit-animation: conveyor 7s linear infinite;
+    position: absolute;
+    top:9.4vw;
+}
+
+.car2{
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+
+.car3{
+    animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+}
+
+.car4{
+    animation-delay: 4.5s;
+    -webkit-animation-delay: 4.5s;
+}
+
+.car5{
+    animation-delay: 6s;
+    -webkit-animation-delay: 6s;
 }
 
 .bearing_con{
@@ -588,6 +677,8 @@ a:-webkit-any-link {
     display:flex;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
+    z-index: 1;
 }
 
 .bearing_con::before{
